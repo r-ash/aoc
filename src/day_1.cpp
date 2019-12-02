@@ -1,6 +1,6 @@
 #include <Rcpp.h>
 #include <math.h>
-#include "week_1.h"
+#include "day_1.h"
 using namespace Rcpp;
 using std::vector;
 
