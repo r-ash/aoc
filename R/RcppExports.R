@@ -31,3 +31,37 @@ fuel_and_fuel_mass_required <- function(masses) {
     .Call(`_aoc_fuel_and_fuel_mass_required`, masses)
 }
 
+#' Run intcode
+#'
+#' @param programme The intcode programme
+#' @return The decoded intcode
+#' @export
+intcode <- function(programme) {
+    .Call(`_aoc_intcode`, programme)
+}
+
+#' Problem asks us to run so arbitrary updates before decoding
+#'
+#' @param programme The intcode programme
+#' @return The updated intcode
+#' @export
+update_programme <- function(programme) {
+    .Call(`_aoc_update_programme`, programme)
+}
+
+#' Set noun and verb and run to get the output
+#'
+#' @param programme The number to get factors for
+#' @export
+set_input_and_run <- function(programme, noun, verb) {
+    .Call(`_aoc_set_input_and_run`, programme, noun, verb)
+}
+
+#' Set noun and verb and run to get the output
+#'
+#' @param programme The number to get factors for
+#' @export
+get_19690720_input <- function(programme) {
+    .Call(`_aoc_get_19690720_input`, programme)
+}
+

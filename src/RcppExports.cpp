@@ -38,11 +38,61 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// intcode
+std::vector<int> intcode(std::vector<int> programme);
+RcppExport SEXP _aoc_intcode(SEXP programmeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type programme(programmeSEXP);
+    rcpp_result_gen = Rcpp::wrap(intcode(programme));
+    return rcpp_result_gen;
+END_RCPP
+}
+// update_programme
+std::vector<int> update_programme(std::vector<int> programme);
+RcppExport SEXP _aoc_update_programme(SEXP programmeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type programme(programmeSEXP);
+    rcpp_result_gen = Rcpp::wrap(update_programme(programme));
+    return rcpp_result_gen;
+END_RCPP
+}
+// set_input_and_run
+std::vector<int> set_input_and_run(std::vector<int> programme, int noun, int verb);
+RcppExport SEXP _aoc_set_input_and_run(SEXP programmeSEXP, SEXP nounSEXP, SEXP verbSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type programme(programmeSEXP);
+    Rcpp::traits::input_parameter< int >::type noun(nounSEXP);
+    Rcpp::traits::input_parameter< int >::type verb(verbSEXP);
+    rcpp_result_gen = Rcpp::wrap(set_input_and_run(programme, noun, verb));
+    return rcpp_result_gen;
+END_RCPP
+}
+// get_19690720_input
+std::vector<int> get_19690720_input(std::vector<int> programme);
+RcppExport SEXP _aoc_get_19690720_input(SEXP programmeSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< std::vector<int> >::type programme(programmeSEXP);
+    rcpp_result_gen = Rcpp::wrap(get_19690720_input(programme));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_aoc_fuel_required", (DL_FUNC) &_aoc_fuel_required, 1},
     {"_aoc_fuel_recursive", (DL_FUNC) &_aoc_fuel_recursive, 1},
     {"_aoc_fuel_and_fuel_mass_required", (DL_FUNC) &_aoc_fuel_and_fuel_mass_required, 1},
+    {"_aoc_intcode", (DL_FUNC) &_aoc_intcode, 1},
+    {"_aoc_update_programme", (DL_FUNC) &_aoc_update_programme, 1},
+    {"_aoc_set_input_and_run", (DL_FUNC) &_aoc_set_input_and_run, 3},
+    {"_aoc_get_19690720_input", (DL_FUNC) &_aoc_get_19690720_input, 1},
     {NULL, NULL, 0}
 };
 
