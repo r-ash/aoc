@@ -1,6 +1,6 @@
 Package: aoc
 Title: Advent of code with Rcpp
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: 
     person(given = "Robert",
            family = "Ashton",
